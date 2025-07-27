@@ -30,13 +30,6 @@ export default {
             }
         ],
         "@semantic-release/github",
-        [
-            "semantic-release-hackage",
-            {
-                "packageName": "megaparsec-time",
-                "versionPrefix": "0.",
-                "publishDocumentation": true
-            }
-        ]
+        "semantic-release-stack-upload",
     ]
 }
