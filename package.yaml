@@ -1,0 +1,57 @@
+name:         megaparsec-time
+version:      0.0.0.0-dev
+license:      GPL-3
+author:       drlkf
+maintainer:   drlkf@drlkf.net
+copyright:    2025 drlkf
+license-file: LICENSE
+github:       drlkf/megaparsec-time
+homepage:     https://github.com/drlkf/megaparsec-time
+bug-reports:  https://github.com/drlkf/megaparsec-time/issues
+category:     Parsing
+tested-with:
+  - GHC == 9.8
+  - GHC == 9.6
+  - GHC == 9.4
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+synopsis: Parsers and utilities for the Megaparsec library.
+description: |
+  Common parsers and utilities to use with the Megaparsec library.
+
+dependencies:
+  - base >= 4.7 && < 5
+  - megaparsec >= 9.0 && < 10
+  - parser-combinators >= 1.0 && < 2
+  - time >= 1.10 && < 2
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+tests:
+  megaparsec-time-test:
+    defaults: sol/hpack-defaults@hspec-cabal-new
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -threaded
+      - -rtsopts
+      - -with-rtsopts=-N
+    dependencies:
+      - megaparsec-time
+      - hspec
+      - QuickCheck
