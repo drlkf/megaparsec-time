@@ -51,12 +51,7 @@ import Text.Megaparsec.Char (
   string',
  )
 import Text.Printf (printf)
-
-_posNumParser
-  :: Ord e
-  => Read a
-  => Parsec e String a
-_posNumParser = read <$> some digitChar
+import Text.Megaparsec.Utils (posNumParser)
 
 -- | Representation of a parser result with either a number of days relative to
 -- the current day, or a 'DayOfWeek'.
@@ -131,19 +126,19 @@ gregorianDayParser = do
 hoursParser
   :: Ord e
   => Parsec e String NominalDiffTime
-hoursParser = secondsToNominalDiffTime . (* 3600) <$> _posNumParser <* char 'h'
+hoursParser = secondsToNominalDiffTime . (* 3600) <$> posNumParser <* char 'h'
 
 -- | Parse a 'NominalDiffTime' from a number of minutes from a string like @1m@.
 minutesParser
   :: Ord e
   => Parsec e String NominalDiffTime
-minutesParser = secondsToNominalDiffTime . (* 60) <$> _posNumParser <* char 'm'
+minutesParser = secondsToNominalDiffTime . (* 60) <$> posNumParser <* char 'm'
 
 -- | Parse a 'NominalDiffTime' from a number of seconds from a string like @1s@.
 secondsParser
   :: Ord e
   => Parsec e String NominalDiffTime
-secondsParser = secondsToNominalDiffTime <$> _posNumParser <* optional (char 's')
+secondsParser = secondsToNominalDiffTime <$> posNumParser <* optional (char 's')
 
 -- | Parse a 'TimeOfDay' from a string like @01:23@.
 timeParser

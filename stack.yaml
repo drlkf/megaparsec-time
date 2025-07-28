@@ -3,3 +3,6 @@ resolver:
 
 packages:
 - .
+
+extra-deps:
+- megaparsec-utils-0.1.0.0@sha256:9c2e136b553486fcea3c3c7ae19ee829def7fe9ba22fcfc1ed553181b6c60046,2028
