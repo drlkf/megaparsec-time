@@ -25,6 +25,7 @@ jobs:
         with:
           ci: ${{ github.ref == 'refs/heads/main' }}
           extra_plugins: |
+            conventional-changelog-conventionalcommits
             semantic-release-mirror-version
             semantic-release-stack-upload
 

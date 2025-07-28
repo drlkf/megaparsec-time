@@ -5,7 +5,15 @@ export default {
     branches: ["main"],
     tagFormat: "${version}",
     plugins: [
-        "@semantic-release/commit-analyzer",
+        [
+            "@semantic-release/commit-analyzer",
+            {
+                "preset": "conventionalcommits",
+                "releaseRules": [
+                    { "type": "docs", "release": "patch" }
+                ]
+            }
+        ],
         "@semantic-release/release-notes-generator",
         [
             "semantic-release-mirror-version",
