@@ -62,7 +62,8 @@ _posNumParser = read <$> some digitChar
 -- the current day, or a 'DayOfWeek'.
 type DayResult = Either Int DayOfWeek
 
--- | Parse a tuple containing a day or not, and a 'TimeOfDay'.
+-- | Parse a tuple containing a day or not, and a 'TimeOfDay', separated with a
+-- space.
 dateParser
   :: Ord e
   => Parsec e String (Maybe DayResult, TimeOfDay)
