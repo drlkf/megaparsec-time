@@ -1,5 +1,7 @@
 Changelog
 
+## [1.0.1](https://github.com/drlkf/megaparsec-time/compare/1.0.0...1.0.1) (2025-07-28)
+
 # 1.0.0 (2025-07-28)
 
 
