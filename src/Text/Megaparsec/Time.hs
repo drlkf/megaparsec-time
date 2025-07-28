@@ -7,6 +7,8 @@
 -- License     : GPL-3
 -- Maintainer  : drlkf@drlkf.net
 -- Stability   : experimental
+--
+-- Parsers for types related to time to use with 'megaparsec'.
 module Text.Megaparsec.Time (
   -- * Types.
   DayResult,
