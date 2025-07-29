@@ -10,10 +10,10 @@
 --
 -- Parsers for types related to time to use with 'megaparsec'.
 module Text.Megaparsec.Time (
-  -- * Types.
+  -- * Types
   DayResult,
 
-  -- * Simple parsers.
+  -- * Simple parsers
   hoursParser,
   minutesParser,
   secondsParser,
@@ -21,7 +21,7 @@ module Text.Megaparsec.Time (
   dayParser,
   gregorianDayParser,
 
-  -- * Composite parsers.
+  -- * Composite parsers
   dateParser,
   durationParser,
 ) where
