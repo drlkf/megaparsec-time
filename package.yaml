@@ -5,9 +5,9 @@ author:       drlkf
 maintainer:   drlkf@drlkf.net
 copyright:    2025 drlkf
 license-file: LICENSE
-github:       drlkf/megaparsec-time
-homepage:     https://github.com/drlkf/megaparsec-time
-bug-reports:  https://github.com/drlkf/megaparsec-time/issues
+github:       haskell-github-trust/megaparsec-time
+homepage:     https://github.com/haskell-github-trust/megaparsec-time
+bug-reports:  https://github.com/haskell-github-trust/megaparsec-time/issues
 category:     Parsing
 tested-with:
   - GHC == 9.8
